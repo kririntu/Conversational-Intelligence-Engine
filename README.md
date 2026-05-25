@@ -145,7 +145,7 @@ YOUR_RENDER_URL
 ## Demo
 
 
-![Home](Conversational-Intelligence-Engine/screenshot/homepage.png)
+![Home](screenshot/homepage.png)
 
 ---
 
