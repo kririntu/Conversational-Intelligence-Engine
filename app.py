@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from rag import ask_question
+from cnv import ask_question
 
 app = FastAPI()
 
