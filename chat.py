@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("RAG Chatbot")
+st.title("Conversational-Intelligence Chatbot")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -17,7 +17,7 @@ question = st.chat_input("Type your message")
 if question:
 
     response = requests.post(
-        "http://127.0.0.1:8000/chat",
+        "https://conversational-intelligence-engine.onrender.com",
         json={"question": question}
     )
 
