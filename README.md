@@ -2,29 +2,27 @@
 
 ## Overview
 
-A context-aware conversational AI system built using LangChain, Groq LLM, ChromaDB, FastAPI, and Streamlit.
+A context-aware conversational AI system built using LangChain, Groq LLM, FastAPI, and Streamlit.
 
-Unlike a stateless chatbot, the system maintains recent conversation history and retrieves relevant contextual information using Retrieval-Augmented Generation (RAG), enabling more intelligent and natural interactions.
+Unlike a stateless chatbot, the system maintains recent conversation history using conversational memory, enabling more natural and coherent interactions across multiple turns.
 
 The project is deployed with:
 
 - FastAPI backend API
 - Streamlit frontend interface
-- ChromaDB vector storage
 - Groq-powered LLM inference
+- Memory-aware conversation handling
 
 ---
 
 ## Features
 
 - Context-aware conversation
-- Retrieval-Augmented Generation (RAG)
 - Conversation memory
+- Multi-turn interaction support
+- Previous interaction awareness
 - FastAPI backend
 - Streamlit frontend
-- ChromaDB vector database
-- Sentence-transformer embeddings
-- Previous interaction awareness
 - Edge-case handling:
     - Empty input
     - Repeated queries
@@ -37,9 +35,6 @@ The project is deployed with:
 - Python
 - LangChain
 - Groq API
-- ChromaDB
-- HuggingFace Embeddings
-- Sentence Transformers
 - FastAPI
 - Streamlit
 
@@ -47,24 +42,20 @@ The project is deployed with:
 
 ## System Architecture
 
-User Query
-↓
-Streamlit Frontend
-↓
-FastAPI API
-↓
-Load Conversation Memory
-↓
-Embedding Generation
-↓
-Retrieve Context from ChromaDB
-↓
-Prompt Construction
-↓
-Groq LLM
-↓
-Contextual Response
-↓
+User Query  
+↓  
+Streamlit Frontend  
+↓  
+FastAPI API  
+↓  
+Load Conversation Memory  
+↓  
+Prompt Construction  
+↓  
+Groq LLM  
+↓  
+Generate Contextual Response  
+↓  
 Update Memory
 
 ---
@@ -117,13 +108,13 @@ GROQ_API_KEY=your_api_key
 
 ---
 
-## Run FastAPI backend
+## Run FastAPI Backend
 
 ```bash
 uvicorn api:app --reload
 ```
 
-API runs at:
+Backend runs at:
 
 ```text
 http://127.0.0.1:8000
@@ -131,7 +122,7 @@ http://127.0.0.1:8000
 
 ---
 
-## Run Streamlit frontend
+## Run Streamlit Frontend
 
 ```bash
 streamlit run app.py
@@ -157,29 +148,27 @@ YOUR_RENDER_URL
 
 ![Home](screenshots/homepage.png)
 
-
-
 ---
 
 ## Example
 
 User:
 
-How do I proceed to the next stage?
+What is machine learning?
 
 Bot:
 
-To proceed to the next stage, I would need more context regarding your current task or process...
+Machine learning is a branch of artificial intelligence that enables systems to learn patterns from data and improve performance without explicit programming.
 
 ---
 
 ## Design Decisions
 
-- Implemented RAG architecture for retrieval
-- Added memory window for conversational continuity
+- Implemented conversation memory for contextual continuity
+- Added memory windowing to preserve recent interactions
 - Limited memory size for efficiency
-- Used FastAPI to separate backend logic
-- Used Streamlit for lightweight deployment
+- Used FastAPI to separate backend and inference logic
+- Used Streamlit for lightweight frontend deployment
 - Included input validation and edge-case handling
 
 ---
@@ -188,6 +177,7 @@ To proceed to the next stage, I would need more context regarding your current t
 
 - Multi-user conversation support
 - Authentication
-- PDF upload capability
 - Persistent memory storage
-- Advanced reranking
+- Database-backed chat history
+- Long-term memory support
+- Voice interaction support
