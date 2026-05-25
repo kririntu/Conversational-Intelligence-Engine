@@ -144,9 +144,8 @@ YOUR_RENDER_URL
 
 ## Demo
 
-(Add screenshots)
 
-![Home](screenshots/homepage.png)
+![Home](screenshot/homepage.png)
 
 ---
 
