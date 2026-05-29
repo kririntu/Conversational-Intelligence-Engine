@@ -17,7 +17,7 @@ question = st.chat_input("Type your message")
 if question:
 
     response = requests.post(
-        "https://conversational-intelligence-engine.onrender.com/chat",
+        "https://conversational-intelligence-engine-1.onrender.com/chat",
         json={"question": question}
     )
 
