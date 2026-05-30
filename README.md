@@ -10,8 +10,8 @@ Unlike a stateless chatbot, this system maintains **conversation memory**, enabl
 
 ## 🚀 Live Deployment
 
-- **Frontend (Streamlit):**  
-https://conversational-intelligence-enginegit-4eo6hq9mmvghtv33p9wxh8.streamlit.app/
+- **Frontend (Streamlit):**
+- https://conversational-intelligence-engine-ufaqoffawnhwks7ydw9klv.streamlit.app/
 
 - **Backend (FastAPI on Render):**  
 https://conversational-intelligence-engine.onrender.com
