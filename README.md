@@ -140,15 +140,6 @@ Add environment variable:
 
 ---
 
-## 💬 Example Interaction
-
-User:  
-What is machine learning?
-
-Bot:  
-Machine learning is a branch of artificial intelligence that enables systems to learn patterns from data and improve performance without being explicitly programmed.
-
----
 
 ## 🧩 Design Decisions
 
